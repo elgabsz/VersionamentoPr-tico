@@ -84,20 +84,40 @@ const removerAtividade = (dia, periodo) => {
           />
         </div>
 
-      {diasDaSemana.map(dia => (
-        <div key={dia} className="dia-container">
-          <h2>{dia}</h2>
-          <div className="periodo-container">
-            <strong>Manhã:</strong> {estudos[dia].manha}
-          </div>
-          <div className="periodo-container">
-            <strong>Tarde:</strong> {estudos[dia].tarde}
-          </div>
-          <div className="periodo-container">
-            <strong>Noite:</strong> {estudos[dia].noite}
-          </div>
+        <div className="button-container">
+          <button onClick={adicionarAtividade}>Adicionar Estudo</button>
         </div>
-      ))}
+      </div>
+
+      <div className="agenda-container">
+        {diasDaSemana.map(dia => (
+          <div key={dia} className="day-card">
+            <h2>{dia}</h2>
+            <div className="period">
+              <strong>Manhã:</strong> {estudos[dia].manha || ''}
+              {estudos[dia].manha && (
+                <button onClick={() => removerAtividade(dia, 'manha')} className="remove-btn">Excluir</button>
+              )}
+            </div>
+            <div className="period">
+              <strong>Tarde:</strong> {estudos[dia].tarde || ''}
+              {estudos[dia].tarde && (
+                <button onClick={() => removerAtividade(dia, 'tarde')} className="remove-btn">Excluir</button>
+              )}
+            </div>
+            <div className="period">
+              <strong>Noite:</strong> {estudos[dia].noite || ''}
+              {estudos[dia].noite && (
+                <button onClick={() => removerAtividade(dia, 'noite')} className="remove-btn">Excluir</button>
+              )}
+            </div>
+            <div className="description-box">
+              <strong>Descrição:</strong>
+              <p>{estudos[dia].descricao || 'Nenhuma descrição fornecida'}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
