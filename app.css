@@ -23,11 +23,10 @@ body {
   }
   
   .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-bottom: 20px;
-    padding: 10px;
-    border: 2px solid #ff4500; /* Bordas em vermelho */
-    border-radius: 5px;
-    background-color: #ffe6e6; /* Fundo suave em tom de vermelho claro */
   }
   
   h2 {
