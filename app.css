@@ -1,19 +1,20 @@
 body {
-    background-color: #e6f7ff; /* Azul claro */
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .app-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff; /* Fundo branco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  background-color: #000000; 
+  color: #ffffff; 
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.app-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #3c0d8e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
   
   h1 {
     color: #ff0000; /* Vermelho vibrante para o título principal */
