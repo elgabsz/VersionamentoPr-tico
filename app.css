@@ -42,6 +42,11 @@ body {
     background-color: #ffcccb; /* Fundo suave em tom de vermelho */
   }
   
+  .input-group,
+.button-container {
+  flex: 1 1 200px;
+}
+
   label {
     display: inline-block;
     width: 100px;
