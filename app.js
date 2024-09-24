@@ -17,6 +17,7 @@ function App() {
   const [atividade, setAtividade] = useState('');
   const [diaSelecionado, setDiaSelecionado] = useState('Segunda-feira');
   const [periodoSelecionado, setPeriodoSelecionado] = useState('manha');
+  const [descricao, setDescricao] = useState('');
 
   const adicionarAtividade = () => {
     if (!atividade) return;
@@ -32,7 +33,16 @@ function App() {
     // Limpar os campos após adicionar
     setAtividade('');
   };
-
+const removerAtividade = (dia, periodo) => {
+    setEstudos(prevEstudos => ({
+      ...prevEstudos,
+      [dia]: {
+        ...prevEstudos[dia],
+        [periodo]: ''
+      }
+    }));
+  };
+  
   return (
     <div className="app-container">
       <h1>Gerenciador de Estudos 2024</h1>
