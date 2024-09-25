@@ -104,3 +104,17 @@ body {
   background-color: #6a0dad; 
   color: #ffffff;
 }
+
+.remove-btn {
+  background-color: #3c0d8e; /* Roxo escuro */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #6a0dad; /* Roxo claro para hover */
+}
