@@ -76,3 +76,11 @@ body {
   button:hover {
     background-color: #dc143c; /* Vermelho escuro */
   }
+
+  /* Estilo do contêiner de agenda */
+.agenda-container {
+  display: flex;
+  overflow-x: auto; /* Permite rolar horizontalmente */
+  gap: 15px; /* Espaçamento entre os cartões */
+  padding-bottom: 10px; /* Espaçamento inferior para a rolagem */
+}
